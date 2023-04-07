@@ -1,51 +1,55 @@
 <a href="https://opensource.newrelic.com/oss-category/#new-relic-experimental"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/dark/Experimental.png"><source media="(prefers-color-scheme: light)" srcset="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Experimental.png"><img alt="New Relic Open Source experimental project banner." src="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Experimental.png"></picture></a>
 
-# Prometheus-Agent-Instruqt
+Prometheus-Agent-Instruqt
+=========================
 
-This is supplemental material related to the Prometheus Agent for Kubernetes Instruqt Lab.
+Este es material complementario relacionado con el Laboratorio Instruqt de Prometheus Agent para Kubernetes.
 
-## Background
+Antecedentes
+------------
 
-The ability to run Prometheus Server in "Agent Mode" was released with Prometheus Server `v2.32.0`.  You can read more about it [here](https://prometheus.io/blog/2021/11/16/agent/#prometheus-agent-mode).  Subsequently, New Relic released the [Prometheus Configurator](https://github.com/newrelic/newrelic-prometheus-configurator) which is a configuration layer around the Prometheus Agent that automatically configures remote write to New Relic and default scrape jobs.
+La capacidad de ejecutar Prometheus Server en "modo agente" se lanzó con Prometheus Server `v2.32.0`. Puede leer más al respecto [aquí](https://prometheus.io/blog/2021/11/16/agent/#prometheus-agent-mode). Posteriormente, New Relic lanzó el [Configurador de Prometheus](https://github.com/newrelic/newrelic-prometheus-configurator), que es una capa de configuración alrededor del Prometheus Agent que configura automáticamente la escritura remota en New Relic y los trabajos de raspado por defecto.
 
-Learn more about the Prometheus Agent in [our documentation](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/setup-prometheus-agent/).
+Obtenga más información sobre el Prometheus Agent en [nuestra documentación](https://docs.newrelic.com/docs/infrastructure/prometheus-integrations/install-configure-prometheus-agent/setup-prometheus-agent/).
 
-## Installation
+Instalación
+-----------
 
-This lab is delivered in the Instruqt platform and all instructions are contained in the lab itself.  Access the lab here: https://play.instruqt.com/newrelic/invite/up9jflwp3clf.
+Este laboratorio se entrega en la plataforma Instruqt y todas las instrucciones se encuentran en el propio laboratorio. Acceda al laboratorio aquí: <https://play.instruqt.com/newrelic/invite/up9jflwp3clf>.
 
-## Getting Started
+Empezando
+---------
 
-* Create an Instruqt account
-* Bring the following: New Relic Account ID, New Relic License Key, New Relic User API Key
+-   Cree una cuenta de Instruqt
+-   Traiga lo siguiente: ID de cuenta de New Relic, clave de licencia de New Relic, clave de API de usuario de New Relic
 
+### Secciones del Laboratorio
 
-### Lab Sections
+1.  Instalación y Configuración
+    -   Instale el Prometheus Agent y otros componentes de New Relic en su clúster.
+2.  ¿Dónde están mis métricas de NGINX?
+    -   Trabaje con el filtro de integraciones y las etiquetas de Kubernetes para habilitar la recolección de métricas de NGINX.
+3.  ¡El agua está fría! Vaya poco a poco
+    -   Recoja selectivamente las métricas de Prometheus de Fluenbit implementando una anotación de raspado personalizada.
+4.  Obtenga esas dulces y deliciosas métricas de un destino estático
+    -   Aprenda cómo configurar el Prometheus Agent para raspar un destino estático que se ejecuta en la VM de Instruqt.
+5.  Métricas y Etiquetas de Métricas: Cómo eliminarlas y fingir que fue un accidente (guiño, guiño)
+    -   Aprenda cómo eliminar métricas y etiquetas de métricas si la cardinalidad o el volumen de ingestión son una preocupación.
+6.  ¿A quién no le encanta un buen tablero?
+    -   Despliegue el tablero de inicio rápido de CoreDNS en su cuenta de New Relic.
 
-1. Installation and Setup
-    * Install the Prometheus Agent and other New Relic components into your cluster
-2. Where are my NGINX metrics?
-    * Work with the integrations filter and Kubernetes labels to enable NGINX metrics collection
-3. The water's cold! Ease your way in
-    * Selectively collect Fluenbit Prometheus metrics by implementing a custom scrape annotation
-4. Get those sweet, sweet metrics from a static target
-    * Learn how to configure the Prometheus Agent to scrape a static target running on the Instruqt VM
-5. Metrics and Metric Labels: How to drop them and pretend it was an accident (wink wink)
-    * Learn how to drop metrics and metric labels if cardinality or ingest volume is a concern
-6. Who doesn't love a good dashboard?
-    * Deploy the CoreDNS Quickstart dashboard to your New Relic account
+Contribución
+------------
 
-## Contributing
+¡Alentamos sus contribuciones para mejorar Prometheus-Agent-Instruqt! Tenga en cuenta que al enviar su solicitud de extracción, deberá firmar el CLA a través de CLA-Assistant. Solo tiene que firmar el CLA una vez por proyecto. Si tiene alguna pregunta o para ejecutar nuestro CLA corporativo, necesario si su contribución es en nombre de una empresa, envíenos un correo electrónico a <opensource@newrelic.com>.
 
-We encourage your contributions to improve **Prometheus-Agent-Instruqt**! Keep in mind when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project.
-If you have any questions, or to execute our corporate CLA, required if your contribution is on behalf of a company,  please drop us an email at opensource@newrelic.com.
+Nota sobre vulnerabilidades
 
-**A note about vulnerabilities**
+Como se menciona en nuestra [política de seguridad](https://chat.openai.com/security/policy), New Relic se compromete a la privacidad y seguridad de nuestros clientes y sus datos. Creemos que proporcionar una divulgación coordinada por parte de los investigadores de seguridad y participar en la comunidad de seguridad son medios importantes para lograr nuestros objetivos de seguridad.
 
-As noted in our [security policy](../../security/policy), New Relic is committed to the privacy and security of our customers and their data. We believe that providing coordinated disclosure by security researchers and engaging with the security community are important means to achieve our security goals.
+Si cree que ha encontrado una vulnerabilidad de seguridad en este proyecto o en cualquiera de los productos o sitios web de New Relic, le agradecemos que lo informe a New Relic a través de [HackerOne](https://hackerone.com/newrelic).
 
-If you believe you have found a security vulnerability in this project or any of New Relic's products or websites, we welcome and greatly appreciate you reporting it to New Relic through [HackerOne](https://hackerone.com/newrelic).
+Licencia
+--------
 
-## License
-
-**Prometheus-Agent-Instruqt** is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
+Prometheus-Agent-Instruqt está bajo la licencia [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt).
